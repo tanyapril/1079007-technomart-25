@@ -15,7 +15,6 @@
             <button type="submit">Искать</button>
             <input type="text" placeholder="Поиск:">  
           </form>
-          <!--Кол-во в закладках и корзине меняется??-->
           <a href="bookmarks.html" class="main-header-btn">Закладки: <span>0</span></a>
           <a href="cart.html" class="main-header-btn">Корзина: <span>10</span></a>
           <a href="order.html" class="main-header-btn order-btn">Оформить заказ</a>
@@ -23,12 +22,14 @@
       </div>
       <div class="main-header-bottom">
         <div class="container">
-          <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
+          <p class="shop-title">Интернет-магазин строительных материалов и инструментов для ремонта</p>
           <div class="main-header-contacts">
+            <p class="visually-hidden">Наши контакты:</p>
             <p>+7 (812) 555-05-55</p>
             <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
           <div class="authorized-user">
+            <p class="visually-hidden">Данные авторизованного пользователя:</p>
             <a href="profile.html" class="user-icon">Пользователь</a>
             <a href="profile.html" class="user-name">Равшан Джамшутович</a>
             <a href="logout.html" class="user-logout">Выйти</a>
@@ -67,11 +68,11 @@
           <h2>Фильтр:</h2>
           <form>
             <!-- одна форма! -->
-            <h3>Цена:</h3>
+            Цена:
 
-            <h3>Производители:</h3>
+            Производители:
 
-            <h3>Питание:</h3>
+            Питание:
 
             <button>Показать</button>
           </form>
@@ -81,7 +82,7 @@
           <h2 class="visually-hidden">Список перфораторов</h2>
 
           <section class="sorting">
-            <p>Сортировка:</p>
+            <h3>Сортировка:</h3><!--????????-->
             <a href="?sorttype=price">По цене</a>
             <a href="?sorttype=type">По типу</a>
             <a href="?sorttype=function">По функционалу</a>
@@ -291,6 +292,7 @@
             <img src="img/logo.png" alt="Логотип интернет-магазина &laquo;Техномарт&raquo;">
           </a>
           <div class="main-footer-contacts">
+            <p class="visually-hidden">Наши контакты:</p>
             <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             <p>+7 (812) 555-05-55</p>
           </div>
@@ -313,11 +315,14 @@
             <p>&copy; 2010&#8211;2019 Компания &laquo;Техномарт&raquo;</p>
             <p>Все права защищены</p>
           </div>
-          <ul class="main-footer-social">
-            <li><a class="social-button vk" href="#">Вконтакте</a></li>
-            <li><a class="social-button fb" href="#">Фейсбук</a></li>
-            <li><a class="social-button ig" href="#">Инстаграм</a></li>
-          </ul>
+          <div class="main-footer-social">
+            <p class="visually-hidden">Мы в социальных сетях:</p>
+            <ul>
+              <li><a class="social-button vk" href="#">Вконтакте</a></li>
+              <li><a class="social-button fb" href="#">Фейсбук</a></li>
+              <li><a class="social-button ig" href="#">Инстаграм</a></li>
+            </ul>
+          </div>
           <div class="creator-email">
             <p>Обратная связь:</p>
             <p>mail&#64;htmlacademy.ru</p>

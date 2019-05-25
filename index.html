@@ -15,7 +15,6 @@
               <button type="submit">Искать</button>
               <input type="text" placeholder="Поиск:">  
           </form>
-          <!--Кол-во в закладках и корзине меняется??-->
           <a href="bookmarks.html" class="main-header-btn">Закладки: <span>0</span></a>
           <a href="cart.html" class="main-header-btn">Корзина: <span>0</span></a>
           <a href="order.html" class="main-header-btn order-btn">Оформить заказ</a>
@@ -24,12 +23,12 @@
 
       <div class="main-header-bottom">
         <div class="container">
-          <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-          <section class="main-header-contacts">
-            <h2 class="visually-hidden">Наши контакты:</h2>
+          <h1 class="shop-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+          <div class="main-header-contacts">
+            <p class="visually-hidden">Наши контакты:</p>
             <p>+7 (812) 555-05-55</p>
             <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          </section>
+          </div>
           <ul class="user-navigation">
             <li><a href="login.html">Войти</a></li>
             <li><a href="register.html">Регистрация</a></li>
@@ -51,7 +50,8 @@
 
     <main>
       <div class="container">
-        <div class="promo">
+        <section class="promo">
+          <h2 class="visually-hidden">Преимущества</h2>
           <div class="material">
             <p>new</p>
             <p>Материалы</p>
@@ -93,17 +93,7 @@
             <button class="prev">Назад</button>
             <button class="next">Вперед</button>
           </div>
-
-          <!--В футерах обеих страниц надо div или всем им section?-->
-          <!--на стр каталога в шапке div авторизации - заменить на section??
-          и div с контактами - section - на обеих страницах???-->
-          <!--всем section - скрытые заголовки?!-->
-<!--СЕЙЧАС ТОЛЬКО В ЭТОМ ХЕДЕРЕ СЕКЦИЯ КОНТАКТОВ, НА ДР. СТР. - ДИВ!!!!!!-->
-
-          <!--img или фон в промо-слайдере?????--> 
-          <!--названия товаров и брендов как названия файлов картинок??!-->
-          <!--Что с названиями на англ яз?-->
-        </div>
+        </section>
 
         <section class="popular-products">
           <header class="popular-items-header">
@@ -316,6 +306,7 @@
             <img src="img/logo.png" alt="Логотип интернет-магазина &laquo;Техномарт&raquo;">
           </a>
           <div class="main-footer-contacts">
+            <p class="visually-hidden">Наши контакты:</p>
             <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             <p>+7 (812) 555-05-55</p>
           </div>
@@ -338,11 +329,14 @@
             <p>&copy; 2010&#8211;2019 Компания &laquo;Техномарт&raquo;</p>
             <p>Все права защищены</p>
           </div>
-          <ul class="main-footer-social">
-            <li><a class="social-button vk" href="#">Вконтакте</a></li>
-            <li><a class="social-button fb" href="#">Фейсбук</a></li>
-            <li><a class="social-button ig" href="#">Инстаграм</a></li>
-          </ul>
+          <div class="main-footer-social">
+            <p class="visually-hidden">Мы в социальных сетях:</p>
+            <ul class="main-footer-social">
+              <li><a class="social-button vk" href="#">Вконтакте</a></li>
+              <li><a class="social-button fb" href="#">Фейсбук</a></li>
+              <li><a class="social-button ig" href="#">Инстаграм</a></li>
+            </ul>
+          </div>
           <div class="creator-email">
             <p>Обратная связь:</p>
             <p>mail&#64;htmlacademy.ru</p>
