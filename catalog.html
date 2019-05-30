@@ -67,15 +67,61 @@
 
         <section class="filters">
           <h2>Фильтр:</h2>
-          <form>
-            <!-- одна форма! -->
-            Цена:
-
-            Производители:
-
-            Питание:
-
-            <button>Показать</button>
+          <form class="filter" method="get">
+            <fieldset>
+              <legend>Цена:</legend>
+              <div class="price-range">
+                <div class="scale">
+                  <div class="bar"></div>
+                  <div class="left-value"></div>
+                  <div class="right-value"></div>
+                </div>
+              </div>
+              <div>
+                <input type="number" name="minprice" min="0" max="35000" value="0">
+                <span>&#8211;</span>
+                <input type="number" name="maxprice" min="0" max="35000" value="30000">
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Производители:</legend>
+              <ul>
+                <li class="filter-option">
+                  <input type="checkbox" name="bosch" id="bosch" checked>
+                  <label for="bosch">Bosch</label>
+                </li>
+                <li class="filter-option">
+                  <input type="checkbox" name="interskol" id="interskol">
+                  <label for="interskol">Интерскол</label>
+                </li>
+                <li class="filter-option">
+                  <input type="checkbox" name="makita" id="makita" checked>
+                  <label for="makita">Makita</label>
+                </li>
+                <li class="filter-option">
+                  <input type="checkbox" name="dewalt" id="dewalt">
+                  <label for="dewalt">DeWALT</label>
+                </li>
+                <li class="filter-option">
+                  <input type="checkbox" name="hitachi" id="hitachi">
+                  <label for="hitachi">Hitachi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Питание:</legend>
+              <ul>
+                <li class="filter-option">
+                  <input type="radio" name="power" id="battery" value="battery" checked>
+                  <label for="battery">Аккумуляторные</label>
+                </li>
+                <li class="filter-option">
+                  <input type="radio" name="power" id="mains" value="mains">
+                  <label for="mains">Сетевые</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="filter-btn" type="submit">Показать</button>
           </form>
         </section>
         
