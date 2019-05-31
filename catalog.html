@@ -12,9 +12,9 @@
             <img src="img/logo.svg" width="109" height="19" 
               alt="Логотип интернет-магазина &laquo;Техномарт&raquo;">
           </a>
-          <form class="search-form">
+          <form class="search-form" method="get">
             <button type="submit">Искать</button>
-            <input type="text" placeholder="Поиск:">  
+            <input type="text" name="search-request" placeholder="Поиск:">  
           </form>
           <a href="bookmarks.html" class="main-header-btn">Закладки: <span>0</span></a>
           <a href="cart.html" class="main-header-btn">Корзина: <span>10</span></a>
@@ -378,9 +378,9 @@
           <div class="main-footer-social">
             <p class="visually-hidden">Мы в социальных сетях:</p>
             <ul>
-              <li><a class="social-button vk" href="#">Вконтакте</a></li>
-              <li><a class="social-button fb" href="#">Фейсбук</a></li>
-              <li><a class="social-button ig" href="#">Инстаграм</a></li>
+              <li><a class="social-btn vk" href="#">Вконтакте</a></li>
+              <li><a class="social-btn fb" href="#">Фейсбук</a></li>
+              <li><a class="social-btn ig" href="#">Инстаграм</a></li>
             </ul>
           </div>
           <div class="creator-email">
@@ -395,8 +395,14 @@
       </div>
     </footer>
 
-    <section class="cart-notification">
-      <!--Всплывающее окно-->
+    <section class="modal cart-notification not-displayed">
+    <!--Всплывающее окно-->
+      <h2>Товар добавлен в корзину!</h2>
+      <div class="modal-bottom">
+        <a href="order.html">Оформить заказ</a>
+        <button type="button">Продолжить покупки</button>
+      </div>
+      <button class="modal-close-btn" type="button">Закрыть окно</button>
     </section>
   </body>
 </html>

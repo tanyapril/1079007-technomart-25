@@ -12,9 +12,9 @@
             <img src="img/logo.svg" width="109" height="19" 
               alt="Логотип интернет-магазина &laquo;Техномарт&raquo;">
           </a>
-          <form class="search-form">
+          <form class="search-form" method="get">
               <button type="submit">Искать</button>
-              <input type="text" placeholder="Поиск:">  
+              <input type="text" name="search-request" placeholder="Поиск:">  
           </form>
           <a href="bookmarks.html" class="main-header-btn">Закладки: <span>0</span></a>
           <a href="cart.html" class="main-header-btn">Корзина: <span>0</span></a>
@@ -316,10 +316,10 @@
         <section class="contacts">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-          <a href="#">
+          <a href="map.html">
             <img src="img/map.png" width="300" height="158" alt="Большая Конюшенная ул., 19">
           </a>
-          <a href="#" class="main-btn">Заблудились? Напишите нам!</a>
+          <a href="feedback.html" class="main-btn">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </main>
@@ -358,9 +358,9 @@
           <div class="main-footer-social">
             <p class="visually-hidden">Мы в социальных сетях:</p>
             <ul class="main-footer-social">
-              <li><a class="social-button vk" href="#">Вконтакте</a></li>
-              <li><a class="social-button fb" href="#">Фейсбук</a></li>
-              <li><a class="social-button ig" href="#">Инстаграм</a></li>
+              <li><a class="social-btn vk" href="#">Вконтакте</a></li>
+              <li><a class="social-btn fb" href="#">Фейсбук</a></li>
+              <li><a class="social-btn ig" href="#">Инстаграм</a></li>
             </ul>
           </div>
           <div class="creator-email">
@@ -374,11 +374,37 @@
         </div>
       </div>
     </footer>
-    <section class="feedback">
+
+    <section class="modal feedback not-displayed">
       <!--Всплывающее окно-->
+      <h3 class="visually-hidden">Напишите нам:</h3>
+      <form method="post">
+        <ul>
+          <li class="feedback-field">
+            <label for="name">Ваше имя:</label>
+            <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+          </li>
+          <li class="feedback-field">
+            <label for="email">Ваш e-mail:</label>
+            <input type="email" name="email" id="email" placeholder="email@example.com">
+          </li>
+          <li class="feedback-field">
+            <label for="message">Текст письма:</label>
+            <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
+          </li>
+        </ul>
+        <div class="modal-bottom">
+          <button type="submit">Отправить</button>
+        </div>
+      </form>
+      <button class="modal-close-btn" type="button">Закрыть окно</button>
     </section>
-    <section class="map">
+
+    <section class="modal map not-displayed">
       <!--Всплывающее окно-->
+      <h3 class="visually-hidden">Наш адрес:</h3>
+      <img src="img/popup-map.png" width="940" height="446" alt="Большая Конюшенная ул., 19">
+      <button class="modal-close-btn" type="button">Закрыть окно</button>
     </section>
   </body>
 </html>
