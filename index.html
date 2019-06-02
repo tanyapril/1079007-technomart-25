@@ -12,9 +12,10 @@
             <img src="img/logo.svg" width="109" height="19" 
               alt="Логотип интернет-магазина &laquo;Техномарт&raquo;">
           </a>
-          <form class="search-form" method="get">
-              <button type="submit">Искать</button>
-              <input type="text" name="search-request" placeholder="Поиск:">  
+          <form class="search-form" method="get" aria-label="Поиск по сайту">
+              <label class="visually-hidden" for="search-request">Введите запрос:</label>
+              <input type="text" name="search-request" id="search-request" placeholder="Поиск:">
+              <button type="submit">Искать</button> 
           </form>
           <a href="bookmarks.html" class="main-header-btn">Закладки: <span>0</span></a>
           <a href="cart.html" class="main-header-btn">Корзина: <span>0</span></a>
@@ -54,17 +55,17 @@
         <section class="promo">
           <h2 class="visually-hidden">Преимущества</h2>
           <div class="material">
-            <p>new</p>
+            <p>Новые поступления</p>
             <p>Материалы</p>
             <a href="material.html">На любой вкус</a>
           </div>
           <div class="tools">
-            <p class="not-displayed">new</p>
+            <p class="not-displayed">Новые поступления</p>
             <p>Инструмент</p>
             <a href="tools.html">На все случаи</a>
           </div>
           <div class="equipment">
-            <p class="not-displayed">new</p>
+            <p class="not-displayed">Новые поступления</p>
             <p>Техника</p>
             <a href="equipment.html">Для стройки</a>
           </div>
@@ -78,16 +79,17 @@
           </div>
 
           <div class="promo-slider">
+            <p class="visually-hidden">Мы предлагаем:</p>
             <ul class="promo-slides">
               <li>
-                <img src="img/slide-drills.jpg" width="620" height="266">
+                <img src="img/slide-drills.jpg" width="620" height="266" alt="Дрели">
                 <div class="slide-text">
                   <p>Дрели</p>
                   <p>Соседям на радость!</p>
                 </div>
               </li>
               <li class="not-displayed">
-                <img src="img/slide-perforators.jpg" width="620" height="266">
+                <img src="img/slide-perforators.jpg" width="620" height="266" alt="Перфораторы">
                 <div class="slide-text">
                   <p>Перфораторы</p>
                   <p>Настоящие мужские игрушки</p>
@@ -122,7 +124,7 @@
 
           <ul class="popular-products-list">
             <li class="catalog-item">
-              <p class="not-displayed">new</p>
+              <p class="not-displayed">Новинка</p>
               <h3>
                 <a href="product-10.html">
                   <span class="product-category">Перфоратор</span>
@@ -142,7 +144,7 @@
             </li>
 
             <li class="catalog-item">
-              <p class="not-displayed">new</p>
+              <p class="not-displayed">Новинка</p>
               <h3>
                 <a href="product-1.html">
                   <span class="product-category">Перфоратор</span>
@@ -162,7 +164,7 @@
             </li>
        
             <li class="catalog-item">
-              <p class="not-displayed">new</p>
+              <p class="not-displayed">Новинка</p>
               <h3>
                 <a href="product-2.html">
                   <span class="product-category">Перфоратор</span>
@@ -182,7 +184,7 @@
             </li>
 
             <li class="catalog-item">
-              <p>new</p>
+              <p>Новинка</p>
               <h3>
                 <a href="product-3.html">
                   <span class="product-category">Перфоратор</span>
@@ -327,7 +329,7 @@
     <footer class="main-footer">
       <div class="main-footer-top">
         <div class="container">
-          <a href="#">
+          <a>
             <img src="img/logo.svg" width="138" height="23" 
               alt="Логотип интернет-магазина &laquo;Техномарт&raquo;">
           </a>
@@ -402,8 +404,18 @@
 
     <section class="modal map not-displayed">
       <!--Всплывающее окно-->
-      <h3 class="visually-hidden">Наш адрес:</h3>
-      <img src="img/popup-map.png" width="940" height="446" alt="Большая Конюшенная ул., 19">
+      <h3 class="visually-hidden">Как до нас добраться:</h3>
+      <img src="img/popup-map.png" width="940" height="446" alt="Офис компании по адресу Большая Конюшенная ул., 19, Санкт-Петербург">
+      <button class="modal-close-btn" type="button">Закрыть окно</button>
+    </section>
+
+    <section class="modal cart-notification not-displayed">
+      <!--Всплывающее окно-->
+      <h2>Товар добавлен в корзину!</h2>
+      <div class="modal-bottom">
+        <a href="order.html">Оформить заказ</a>
+        <button type="button">Продолжить покупки</button>
+      </div>
       <button class="modal-close-btn" type="button">Закрыть окно</button>
     </section>
   </body>
