@@ -13,6 +13,8 @@ a {
   text-decoration: none;
 }
 
+/*-------------------Стили хедера-----------------*/
+
 .main-header-top {
   background-color: #293449;
 }
@@ -21,7 +23,8 @@ a {
   background-color: #ee3643;
 }
 
-.search-form input[type="text"], .search-form button {
+.search-form input[type="text"], 
+.search-form button {
   border: none;
   background-color: transparent;
 }
@@ -29,7 +32,7 @@ a {
 .search-form input[type="text"] {
   font-size: 17px;
   line-height: 18px;
-  color: #000000;
+  /* color: #000000; */
 }
 
 .search-form input[type="text"]:-ms-input-placeholder {
@@ -91,7 +94,9 @@ a {
 }
 
 .user-navigation li,
-.user-icon, .user-name, .user-logout {
+.user-icon, 
+.user-name, 
+.user-logout {
   background-color: #ffffff;
 }
 
@@ -117,4 +122,40 @@ a {
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
+}
+
+/*-------------------Стили футера-----------------*/
+
+.main-footer-top {
+  /* font-size: 18px;
+  line-height: 24px; */
+  background-color: #32425c;
+}
+
+.main-footer-navigation {
+  list-style: none;
+}
+
+.main-footer-contacts,
+.main-footer-navigation li:nth-child(-n+5) a { /*вложенность 3 - менять???*/
+  color: #f1f5f7;
+}
+
+.main-footer-navigation li:nth-child(n+6) a { /*вложенность 3 - менять???*/
+  color: #ffd180;
+}
+
+.main-footer-bottom {
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #32425c;
+}
+
+.creator-info {
+  color: #ffd180;
+}
+
+.main-footer-social {
+  list-style: none;
 }
