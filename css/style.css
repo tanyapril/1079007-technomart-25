@@ -107,7 +107,7 @@ a {
 .user-name {
   font-size: 21px;
   line-height: 21px;
-  color: inherit;
+  color: #000000;
 }
 
 .authorized-user-navigation a {
@@ -162,3 +162,309 @@ a {
 }
 
 /*-------------------Стили main-----------------*/
+
+.main-btn {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.main-btn-red {
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+.main-section h2 {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: inherit;
+  text-transform: uppercase;
+}
+
+.text-section p {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.catalog-element a {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.catalog-section-title {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: inherit;
+  text-transform: uppercase;
+}
+
+/*-------------------Промо-блок index.html-----------------*/
+
+.promo-item-name {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.promo-item a {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.new-flag {
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+.material {
+  background-color: #ffbf47;
+}
+
+.tools {
+  background-color: #3bbce3;
+}
+
+.equipment {
+  background-color: #dc91d8;
+}
+
+.sale {
+  background-color: #8ed78f;
+}
+
+.free-delivery {
+  background-color: #ffc047;
+}
+
+.promo-slides,
+.slider-dots {
+  list-style: none;
+}
+
+.slide-text {
+  color: #ffffff;
+}
+
+.slide-text p:first-child {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+/*-------------------Популярные товары и производители index.html, catalog.html-----------------*/
+
+.popular-items-header {
+  background-color: #f9f5f0;
+}
+
+.popular-items-header h2 {
+  color: #32425c;
+}
+
+.popular-products-list,
+.popular-brands-list {
+  list-style: none;
+}
+
+.product-title {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.product-price {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.product-old-price {
+  color: #a9a9a9;
+}
+
+.product-current-price {
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+.buy-btn {
+  color: #ffffff;
+  background-color: #63a63e;
+}
+
+.to-bookmarks-btn {
+  border: solid 3px #63a63e;
+  color: #32425c;
+  background-color: #ffffff;
+}
+
+/*-------------------Сервисы, о компании, контакты index.html-----------------*/
+
+.services {
+  background-color: #f4f7f9;
+}
+
+.slider-navigation,
+.services-slides,
+.company-delivery-partners {
+  list-style: none;
+}
+
+.slider-navigation button {
+  border: none;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #32425c;
+}
+
+.current-slide button {
+  color: #32425c;
+  background-color: #ffffff;
+}
+
+.services-slides h3 {
+  font-size: 36px;
+  font-weight: inherit;
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+.delivery h3 {
+  line-height: 36px;
+}
+
+.credit-btn {
+  color: #ffffff;
+  background-color: #ff5357;
+}
+
+.company-delivery-partners li {
+  line-height: 20px;
+}
+
+/*-------------------catalog.html-----------------*/
+
+.catalog-title {
+  font-size: 30px;
+  font-weight: inherit;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #32425c;
+  background-color: #f2f6f8;
+}
+
+.filter-brands,
+.filter-power-type,
+.sort-type,
+.sort-direction,
+.catalog-list,
+.pagination,
+.breadcrumbs {
+  list-style: none;
+}
+
+.filters h2,
+.sorting,
+.price-range,
+.price-numbers input[type="number"] {
+  background-color: #f7f3ec;
+}
+
+.filter legend {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.power-type-legend {
+  letter-spacing: 0.17px;
+}
+
+.scale {
+  background-color: #d7dcde;
+}
+
+.bar {
+  background-color: #32cd32; /*?????? - цвет не указан на макете!*/
+}
+
+.price-numbers input[type="number"] {
+  border: none;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.price-numbers span {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+}
+
+.filter-option label {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.filter-btn {
+  border: solid 1px #e5e5e5;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.sort-type a {
+  color: rgba(0, 0, 0, 0.3);
+  /* text-decoration-style и -color не работает в IE, Edge + style в Safari */
+}
+
+.sort-direction a {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sort-type .active,
+.sort-direction .active {
+  color: #ee3643;
+}
+
+.catalog-list .product-old-price {
+  color: #999999;
+}
+
+.pagination a {
+  border: solid 1px #e5e5e5;
+  background-color: #ffffff;
+}
+
+.current-page a {
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+.product-info {
+  background-color: #f4f7f9;
+}
