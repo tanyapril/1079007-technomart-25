@@ -100,8 +100,8 @@
                 </div>
               </li>
             </ul>
-            <button class="prev">Назад</button>
-            <button class="next">Вперед</button>
+            <button class="slider-btn prev-btn">Назад</button>
+            <button class="slider-btn next-btn">Вперед</button>
             <a href="catalog.html" class="main-btn main-btn-red">Открыть каталог</a>
             <ul class="slider-dots">
               <li>
@@ -113,7 +113,7 @@
               <li>
                 <button>
                   Слайд 2
-                  <span class="current-dot not-displayed"></span>
+                  <span></span>
                 </button>
               </li>
             </ul>
@@ -256,7 +256,7 @@
 
           <div class="services-slider">
             <ul class="slider-navigation">
-                <li class="current-slide"><button>Доставка</button></li>
+                <li><button class="current-slide">Доставка</button></li>
                 <li><button>Гарантия</button></li>
                 <li><button>Кредит</button></li>
             </ul>
@@ -373,7 +373,7 @@
       <!--Всплывающее окно-->
       <h3 class="visually-hidden">Напишите нам:</h3>
       <form method="post">
-        <ul>
+        <ul class="feedback-fields">
           <li class="feedback-field">
             <label for="name">Ваше имя:</label>
             <input type="text" name="name" id="name" placeholder="Имя Фамилия">
@@ -388,7 +388,7 @@
           </li>
         </ul>
         <div class="modal-bottom">
-          <button type="submit">Отправить</button>
+          <button type="submit" class="main-btn main-btn-red send-btn">Отправить</button>
         </div>
       </form>
       <button class="modal-close-btn" type="button">Закрыть окно</button>
@@ -405,8 +405,8 @@
       <!--Всплывающее окно-->
       <h2>Товар добавлен в корзину!</h2>
       <div class="modal-bottom">
-        <a href="order.html">Оформить заказ</a>
-        <button type="button">Продолжить покупки</button>
+        <a href="order.html" class="main-btn main-btn-red modal-order-btn">Оформить заказ</a>
+        <button type="button" class="main-btn continue-shopping-btn">Продолжить покупки</button>
       </div>
       <button class="modal-close-btn" type="button">Закрыть окно</button>
     </section>

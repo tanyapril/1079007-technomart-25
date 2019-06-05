@@ -12,7 +12,7 @@
     <header class="main-header">
       <div class="main-header-top">
         <div class="container">
-          <a href="index.html" class="logo">
+          <a href="index.html" class="logo logo-clickable">
             <img src="img/logo.svg" width="109" height="19" 
               alt="Логотип интернет-магазина &laquo;Техномарт&raquo;">
           </a>
@@ -307,7 +307,7 @@
           </ul>
 
           <ul class="pagination catalog-element">
-            <li class="current-page"><a>1</a></li>
+            <li><a class="current-page">1</a></li>
             <li><a href="#">2</a></li>
             <li><a href="#">3</a></li>
             <li><a href="#" class="next-page-btn">Следующая</a></li>
@@ -382,8 +382,8 @@
     <!--Всплывающее окно-->
       <h2>Товар добавлен в корзину!</h2>
       <div class="modal-bottom">
-        <a href="order.html">Оформить заказ</a>
-        <button type="button">Продолжить покупки</button>
+        <a href="order.html" class="main-btn main-btn-red modal-order-btn">Оформить заказ</a>
+        <button type="button" class="main-btn continue-shopping-btn">Продолжить покупки</button>
       </div>
       <button class="modal-close-btn" type="button">Закрыть окно</button>
     </section>

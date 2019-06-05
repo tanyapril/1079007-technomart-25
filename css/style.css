@@ -13,6 +13,32 @@ a {
   text-decoration: none;
 }
 
+.not-displayed {
+  /* display: none; */
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.no-old-price {
+  visibility: hidden;
+}
+
 /*-------------------Стили хедера-----------------*/
 
 .main-header-top {
@@ -21,6 +47,14 @@ a {
 
 .logo {
   background-color: #ee3643;
+}
+
+.logo-clickable:hover {
+  background-color: #ca2c37;
+}
+
+.logo-clickable:active {
+  background-color: #ba2732;
 }
 
 .search-form input[type="text"], 
@@ -53,12 +87,46 @@ a {
   color: #ffffff;
 }
 
+.user-bookmarks-btn:hover,
+.cart-btn:hover,
+.search-form input[type="text"]:hover {
+  background-color: #212a3a;
+}
+
+.user-bookmarks-btn:active,
+.cart-btn:active {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #161d29;
+}
+
+.search-form input[type="text"]:focus {
+  background-color: #ffffff;
+}
+
 .not-empty {
   background-color: #ee3643;
 }
 
+.not-empty:hover {
+  background-color: #ca2c37;
+}
+
+.not-empty:active {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #ba2732;
+}
+
 .order-btn {
   background-color: #63a63e;
+}
+
+.order-btn:hover {
+  background-color: #5fbb2d;
+}
+
+.order-btn:active {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #518534;
 }
 
 .main-header-bottom {
@@ -96,7 +164,7 @@ a {
   list-style: none;
 }
 
-.user-navigation li,
+.user-navigation a,
 .user-icon, 
 .user-name, 
 .user-logout {
@@ -110,11 +178,28 @@ a {
   color: #000000;
 }
 
+.user-navigation a:hover {
+  color: #ee3643;
+}
+
+.user-navigation a:active,
+.user-name:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .authorized-user-navigation a {
   font-size: 16px;
   line-height: 18px;
   text-decoration: underline;
   color: #32425c;
+}
+
+.authorized-user-navigation a:hover {
+  color: #ee3643;
+}
+
+.authorized-user-navigation a:active {
+  color: rgba(50, 66, 92, 0.3);
 }
 
 .main-navigation {
@@ -125,6 +210,15 @@ a {
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
+}
+
+.main-navigation-list a:hover {
+  background-color: #293449;
+}
+
+.main-navigation-list a:active {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #1d2739;
 }
 
 /*-------------------Стили футера-----------------*/
@@ -146,6 +240,14 @@ a {
   color: #ffd180;
 }
 
+.footer-navigation-item a:hover {
+  text-decoration: underline;
+}
+
+.footer-navigation-item a:active {
+  opacity: 0.5;
+}
+
 .main-footer-bottom {
   font-size: 16px;
   line-height: 18px;
@@ -157,8 +259,29 @@ a {
   color: #ffd180;
 }
 
+.creator-info:hover {
+  text-decoration: underline;
+}
+
+.creator-info:active {
+  text-decoration: none;
+  color: #ee3643;
+}
+
 .main-footer-social {
   list-style: none;
+}
+
+.social-btn {
+  background-color: #212a3a;
+}
+
+.social-btn:hover {
+  background-color: #ee3643;
+}
+
+.social-btn:active {
+  background-color: #ee3643;
 }
 
 /*-------------------Стили main-----------------*/
@@ -172,6 +295,14 @@ a {
 .main-btn-red {
   color: #ffffff;
   background-color: #ee3643;
+}
+
+.main-btn-red:hover {
+  background-color: #ca2c37;
+}
+
+.main-btn-red:active {
+  background-color: #ba2732;
 }
 
 .main-section h2 {
@@ -203,6 +334,13 @@ a {
   text-transform: uppercase;
 }
 
+.new-flag {
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
 /*-------------------Промо-блок index.html-----------------*/
 
 .promo-item-name {
@@ -217,11 +355,12 @@ a {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.new-flag {
-  font-size: 14px;
-  line-height: 18px;
-  color: #ffffff;
-  background-color: #ee3643;
+.promo-item a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.promo-item a:active {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .material {
@@ -260,6 +399,11 @@ a {
   text-transform: uppercase;
 }
 
+.slider-btn {
+  border: none;
+  background-color: transparent;
+}
+
 /*-------------------Популярные товары и производители index.html, catalog.html-----------------*/
 
 .popular-items-header {
@@ -273,6 +417,15 @@ a {
 .popular-products-list,
 .popular-brands-list {
   list-style: none;
+}
+
+.catalog-item {
+  border: solid 1px #e5e5e5;
+  background-color: #ffffff;
+}
+
+.catalog-item:hover {
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .product-title {
@@ -292,7 +445,7 @@ a {
 }
 
 .product-old-price {
-  color: #a9a9a9;
+  color: #999999;
 }
 
 .product-current-price {
@@ -305,10 +458,43 @@ a {
   background-color: #63a63e;
 }
 
+.buy-btn:hover {
+  background-color: #5fbb2d;
+}
+
+.buy-btn:active {
+  background-color: #518534;
+}
+
 .to-bookmarks-btn {
   border: solid 3px #63a63e;
   color: #32425c;
   background-color: #ffffff;
+}
+
+.to-bookmarks-btn:hover {
+  border-color: #32425c;
+}
+
+.to-bookmarks-btn:active {
+  opacity: 0.3;
+}
+
+.popular-brands-list a {
+  border: solid 1px #e5e5e5;
+  background-color: #ffffff;
+}
+
+.popular-brands-list a:hover {
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.popular-brands-list a:active {
+  box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
+}
+
+.popular-brands-list a:active img {
+  opacity: 0.3;
 }
 
 /*-------------------Сервисы, о компании, контакты index.html-----------------*/
@@ -332,9 +518,13 @@ a {
   background-color: #32425c;
 }
 
-.current-slide button {
+.slider-navigation .current-slide {
   color: #32425c;
   background-color: #ffffff;
+}
+
+.slider-navigation button:not(.current-slide):hover {
+  background-color: #293449;
 }
 
 .services-slides h3 {
@@ -355,6 +545,59 @@ a {
 
 .company-delivery-partners li {
   line-height: 20px;
+}
+
+/*-------------------Всплывающие окна-----------------*/
+
+.modal-bottom {
+  background-color: #f1f1f1;
+}
+
+.feedback-fields {
+  list-style: none;
+}
+
+.feedback-field label {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.feedback-field input[type="text"],
+.feedback-field input[type="email"],
+.feedback-field textarea {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #999999;
+  border: solid 2px #d7dcde;
+  background-color: #ffffff;
+}
+
+.feedback-field input[type="text"]:hover,
+.feedback-field input[type="email"]:hover,
+.feedback-field textarea:hover {
+  border-color: #b5b5b5;
+}
+
+.feedback-field input[type="text"]:focus,
+.feedback-field input[type="email"]:focus,
+.feedback-field textarea:focus {
+  border-color: #ee3643;
+}
+
+.send-btn {
+  border: none;
+}
+
+.cart-notification h2 {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: inherit;
+}
+
+.continue-shopping-btn {
+  border: none;
+  background-color: #ffffff;
 }
 
 /*-------------------catalog.html-----------------*/
@@ -427,6 +670,11 @@ a {
   text-transform: uppercase;
 }
 
+.filter-option input[type="radio"]:disabled + label,
+.filter-option input[type="checkbox"]:disabled + label {
+  opacity: 0.4;
+}
+
 .filter-btn {
   border: solid 1px #e5e5e5;
   font-family: "PT Sans", Arial, sans-serif;
@@ -442,27 +690,44 @@ a {
   /* text-decoration-style и -color не работает в IE, Edge + style в Safari */
 }
 
-.sort-direction a {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.sort-type .active,
-.sort-direction .active {
+.sort-type .active {
   color: #ee3643;
 }
 
-.catalog-list .product-old-price {
-  color: #999999;
+.sort-type a:not(.active):hover {
+  color: #000000;
+  /* text-decoration-style и -color не работает в IE, Edge + style в Safari */
+}
+
+.sort-direction a {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.sort-direction .active {
+  background-color: #ee3643;
+}
+
+.sort-direction a:not(.active):hover {
+  background-color: #000000;
 }
 
 .pagination a {
   border: solid 1px #e5e5e5;
+  color: #000000;
   background-color: #ffffff;
 }
 
-.current-page a {
+.pagination .current-page {
   color: #ffffff;
   background-color: #ee3643;
+}
+
+.pagination a:not(.current-page):hover {
+  border-color: #bdc6ca;
+}
+
+.pagination a:not(.current-page):active {
+  border-color: #ee3643;
 }
 
 .product-info {
