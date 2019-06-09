@@ -351,13 +351,49 @@ input[type="radio"].visually-hidden {
   background-color: #32425c;
 }
 
-.main-footer-navigation {
-  list-style: none;
+.main-footer-top .container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 45px;
+}
+
+.footer-logo {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  padding: 20px 41px 25px 41px;
 }
 
 .main-footer-contacts,
 .footer-navigation-item:nth-child(-n+5) a {
   color: #f1f5f7;
+}
+
+.main-footer-contacts {
+  margin: 100px 0 0 0;
+}
+
+.main-footer-contacts p {
+  margin: 0;
+  padding: 0;
+}
+
+.main-footer-navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  flex-basis: 615px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-navigation-item a {
+  display: block;
+  margin: 38px 0 0 60px;
 }
 
 .footer-navigation-item:nth-child(n+6) a {
@@ -376,7 +412,62 @@ input[type="radio"].visually-hidden {
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
-  background-color: #32425c;
+  background-color: #293449;
+}
+
+.main-footer-bottom .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 35px 0 27px 0;
+}
+
+.copyright {
+  margin: 0 161px 0 0;
+}
+
+.copyright p {
+  margin: 0;
+  padding: 0;
+}
+
+.main-footer-social {
+  margin: 0 116px 0 0;
+}
+
+.main-footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 135px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-btn {
+  display: block;
+  width: 42px;
+  height: 42px;
+  margin: 0 3px 3px 0;
+  background-color: #212a3a;
+}
+
+.social-btn:hover {
+  background-color: #ee3643;
+}
+
+.social-btn:active {
+  background-color: #ee3643;
+}
+
+.creator-email {
+  margin: 0 53px 0 0;
+}
+
+.creator-email p,
+.creator p {
+  margin: 0;
+  padding: 0;
 }
 
 .creator-info {
@@ -390,22 +481,6 @@ input[type="radio"].visually-hidden {
 .creator-info:active {
   text-decoration: none;
   color: #ee3643;
-}
-
-.main-footer-social {
-  list-style: none;
-}
-
-.social-btn {
-  background-color: #212a3a;
-}
-
-.social-btn:hover {
-  background-color: #ee3643;
-}
-
-.social-btn:active {
-  background-color: #ee3643;
 }
 
 /*-------------------Стили main-----------------*/
