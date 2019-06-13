@@ -13,6 +13,11 @@ a {
   text-decoration: none;
 }
 
+/* img {
+  max-width: 100%; Что насчет отмасштабированного svg???
+  height: auto;
+} */
+
 .not-displayed {
   /* display: none; */
 }
@@ -52,36 +57,36 @@ input[type="radio"].visually-hidden {
 }
 
 .main-header-top .container {
-  position: relative;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .logo {
   line-height: 0px;
   background-color: #ee3643;
-  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 5px 0 0 rgba(0, 0, 0, 0.24), 0px 5px 0 0 #ee3643;
 }
 
 .logo-clickable:hover {
   background-color: #ca2c37;
+  box-shadow: 0px 5px 0 0 rgba(0, 0, 0, 0.24), 0px 5px 0 0 #ca2c37;
 }
 
 .logo-clickable:active {
   background-color: #ba2732;
+  box-shadow: 0px 5px 0 0 rgba(0, 0, 0, 0.24), 0px 5px 0 0 #ba2732;
 }
 
 .header-logo {
-  position: absolute;
-  top: 0;
-  left: 10px;
-  padding: 13px 56px 15px 55px;
+  position: relative;
+  align-self: flex-start;
+  padding: 13px 56px 10px 55px;
 }
 
 .search-form {
   display: flex;
   flex-direction: row-reverse;
   flex-basis: 270px;
-  margin-left: 220px;
 }
 
 .search-form input[type="text"], 
@@ -175,7 +180,7 @@ input[type="radio"].visually-hidden {
 .main-header-bottom .container {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 46px;
+  padding: 46px 0 60px 0;
 }
 
 .main-header-bottom h1 {
@@ -183,8 +188,9 @@ input[type="radio"].visually-hidden {
 }
 
 .shop-title {
-  width: 197px;
-  margin: 3px 0 0 52px;
+  flex-basis: 197px;
+  margin: 0 0 43px 52px;
+  padding: 3px 0 0 0;
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
@@ -192,22 +198,22 @@ input[type="radio"].visually-hidden {
 }
 
 .main-header-contacts {
-  width: 270px;
+  flex-basis: 270px;
   margin: 0 0 43px 70px;
 }
 
 .main-header-phone {
-  margin: 0;
-  padding: 10px 0 8px 19px;
-  text-align: center;
-  border: solid 3px #ffffff;
+  margin: 0 0 5px 0;
+  padding: 10px 0 8px 71px;
+  box-sizing: border-box;
+  border: solid 3.2px #ffffff;
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
 }
 
 .main-header-address {
-  margin: 5px 0 0 0;
+  margin: 0;
   text-align: center;
   font-size: 14px;
   line-height: 24px;
@@ -224,20 +230,21 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   flex-basis: 281px;
-  margin: 0 0 0 70px;
+  margin: 0 0 43px 70px;
   padding: 0;
 }
 
 .authorized-user {
   display: flex;
-  flex-basis: 300px;
   flex-wrap: wrap;
   align-content: flex-start;
-  margin: 0 0 0 51px;
+  flex-basis: 300px;
+  margin: 0 0 43px 51px;
 }
 
 .authorized-user-navigation {
   display: flex;
+  flex-wrap: wrap;
   margin: 3px 0 0 0;
   padding: 0 0 0 17px;
 }
@@ -251,8 +258,7 @@ input[type="radio"].visually-hidden {
 
 .user-navigation a,
 .user-name {
-  padding-top: 13px;
-  padding-bottom: 11px;
+  padding: 13px 0 11px 0;
   font-size: 21px;
   line-height: 21px;
   color: #000000;
@@ -294,11 +300,24 @@ input[type="radio"].visually-hidden {
 }
 
 .authorized-user-navigation a {
-  margin-right: 13px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 15px 0 0;
   font-size: 16px;
   line-height: 18px;
   text-decoration: underline;
   color: #32425c;
+}
+
+.authorized-user-navigation li:not(:last-child)::after {
+  display: inline-block;
+  vertical-align: middle;
+  content: "";
+  width: 4px;
+  height: 4px;
+  margin: 0 15px 0 0;
+  border-radius: 50%;
+  background-color: #32425c;
 }
 
 .authorized-user-navigation a:hover {
@@ -310,7 +329,6 @@ input[type="radio"].visually-hidden {
 }
 
 .main-navigation {
-  margin-bottom: 60px;
   background-color: #32425c;
   box-shadow: inset 0px -5px 0 0 #293449;
 }
@@ -352,18 +370,20 @@ input[type="radio"].visually-hidden {
 }
 
 .main-footer-top .container {
-  position: relative;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding-bottom: 45px;
 }
 
+.footer-top-left-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-logo {
-  position: absolute;
-  top: 0;
-  left: 10px;
-  padding: 20px 41px 25px 41px;
+  padding: 20px 41px;
+  align-self: flex-start;
 }
 
 .main-footer-contacts,
@@ -372,7 +392,7 @@ input[type="radio"].visually-hidden {
 }
 
 .main-footer-contacts {
-  margin: 100px 0 0 0;
+  margin: 37px 0 0 0;
 }
 
 .main-footer-contacts p {
@@ -438,7 +458,7 @@ input[type="radio"].visually-hidden {
 .main-footer-social-list {
   display: flex;
   flex-wrap: wrap;
-  width: 135px;
+  flex-basis: 135px;
   margin: 0;
   padding: 0;
   list-style: none;
