@@ -232,7 +232,6 @@ input[type="radio"].visually-hidden {
 
 .user-navigation {
   display: flex;
-  justify-content: space-between;
   flex-basis: 281px;
   margin: 0 0 43px 70px;
   padding: 0;
@@ -286,12 +285,13 @@ input[type="radio"].visually-hidden {
   display: block;
   padding-left: 48px;
   padding-right: 25px;
+  margin: 0 10px 0 0;
 }
 
 .user-navigation .register {
   display: block;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .user-navigation a:hover {
@@ -375,7 +375,6 @@ input[type="radio"].visually-hidden {
 
 .main-footer-top .container {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   padding-bottom: 45px;
 }
@@ -569,7 +568,6 @@ input[type="radio"].visually-hidden {
 .promo {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-content: flex-start;
   margin: 0 0 33px 0;
 }
@@ -577,9 +575,14 @@ input[type="radio"].visually-hidden {
 .promo-item {
   position: relative;
   width: 300px;
-  margin: 0 0 20px 0;
+  margin: 0 20px 20px 0;
   padding: 20px 110px 22px 24px;
   box-sizing: border-box;
+}
+
+.promo-item:nth-of-type(3),
+.promo-right-col .promo-item {
+  margin-right: 0;
 }
 
 .promo-right-col {
@@ -599,8 +602,9 @@ input[type="radio"].visually-hidden {
 .promo-item a {
   display: block;
   width: 135px;
-  padding: 10px 0;
+  padding: 10px 5px;
   text-align: center;
+  box-sizing: border-box;
   border-radius: 3px;
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.1);
@@ -644,7 +648,7 @@ input[type="radio"].visually-hidden {
   position: relative;
   width: 620px;
   height: 266px;
-  margin: 0 0 20px 0;
+  margin: 0 20px 20px 0;
 }
 
 .promo-slides,
@@ -706,7 +710,8 @@ input[type="radio"].visually-hidden {
   left: 24px;
   display: block;
   width: 195px;
-  padding: 10px 45px 10px 49px;
+  padding: 10px 5px;
+  text-align: center;
   box-sizing: border-box;
   border-radius: 3px;
 }
@@ -714,10 +719,10 @@ input[type="radio"].visually-hidden {
 .slider-dots {
   position: absolute;
   z-index: 10;
+  display: flex;
   bottom: 36px;
   left: 50%;
   transform: translate(-50%);
-
 }
 
 /*-------------------Популярные товары и производители index.html, catalog.html-----------------*/
