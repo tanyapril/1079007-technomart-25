@@ -52,10 +52,6 @@ input[type="radio"].visually-hidden {
 
 /*-------------------Стили хедера-----------------*/
 
-.main-header {
-  margin: 0 0 59px 0;
-}
-
 .main-header-top {
   background-color: #293449;
 }
@@ -588,7 +584,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  margin: 0 0 33px 0;
+  margin: 59px 0 33px 0;
 }
 
 .promo-item {
@@ -1254,6 +1250,8 @@ input[type="radio"].visually-hidden {
 /*-------------------catalog.html-----------------*/
 
 .catalog-title {
+  margin: 0 0 20px 0;
+  padding: 30px 30px 29px 30px;
   font-size: 30px;
   font-weight: inherit;
   line-height: 30px;
@@ -1272,14 +1270,77 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 21px 0 20px 0;
+}
+
+.breadcrumbs a {
+  display: block;
+  margin: 0 16px 0 0;
+}
+
+.breadcrumbs li:not(:last-child) {
+  position: relative;
+  margin: 0 24px 0 0;
+}
+
+.breadcrumbs li:not(:last-child)::before {
+  position: absolute;
+  top: 6.5px;
+  right: -8px;
+  content: "";
+  width: 8px;
+  height: 1px;
+  transform: rotate(45deg);
+  background-color: #c0c5cd;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  position: absolute;
+  top: 12px;
+  right: -8px;
+  content: "";
+  width: 8px;
+  height: 1px;
+  transform: rotate(-45deg);
+  background-color: #c0c5cd;
+}
+
+.filters-catalog-cols {
+  display: flex;
+}
+
+.filters {
+  width: 220px;
+}
+
 .filters h2,
 .sorting,
 .price-range,
 .price-numbers input[type="number"] {
   background-color: #f7f3ec;
+  border-radius: 3px;
+}
+
+.filters h2 {
+  margin: 0;
+  padding: 10px 18px;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter fieldset:not(:last-of-type) {
+  border-bottom: solid 1px #e5e5e5;
 }
 
 .filter legend {
+  /* padding: 0; */
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   line-height: 30px;
@@ -1336,41 +1397,105 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
+.catalog {
+  width: 700px;
+  margin-left: auto;
+}
+
+.sorting {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 0 20px 0;
+  padding: 10px 17px 10px 19px;
+}
+
+.sorting h3 {
+  margin: 0;
+}
+
+.sort-type {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
 .sort-type a {
+  display: block;
   color: rgba(0, 0, 0, 0.3);
-  /* text-decoration-style и -color не работает в IE, Edge + style в Safari */
+  border-bottom: dotted 1px #ee3643;
 }
 
 .sort-type .active {
   color: #ee3643;
+  border-bottom: none;
 }
 
 .sort-type a:not(.active):hover {
   color: #000000;
-  /* text-decoration-style и -color не работает в IE, Edge + style в Safari */
+  border-bottom-style: solid;
+}
+
+.sort-direction {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .sort-direction a {
-  background-color: rgba(0, 0, 0, 0.3);
+  display: block;
+  width: 0;
+  height: 0;
+  border: solid 6px transparent;
+  border-bottom: solid 10px #c5c5c5;
+}
+
+.sort-direction .descending {
+  transform-origin: 50% 10.5px;
+  transform: rotate(180deg);
 }
 
 .sort-direction .active {
-  background-color: #ee3643;
+  border-bottom-color: #ee3643;
 }
 
 .sort-direction a:not(.active):hover {
-  background-color: #000000;
+  border-bottom-color: #000000;
+}
+
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 32px 0;
+  padding: 0;
+}
+
+.catalog-list .catalog-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 50px 0;
+  padding: 0;
 }
 
 .pagination a {
+  display: block;
+  margin: 0 10px 10px 0;
+  padding: 10px 0;
   border: solid 1px #e5e5e5;
   color: #000000;
   background-color: #ffffff;
+  border-radius: 3px;
 }
 
 .pagination .current-page {
   color: #ffffff;
   background-color: #ee3643;
+  border-color: #ee3643;
 }
 
 .pagination a:not(.current-page):hover {
@@ -1383,4 +1508,17 @@ input[type="radio"].visually-hidden {
 
 .product-info {
   background-color: #f4f7f9;
+}
+
+.product-info .container {
+  padding-top: 67px;
+  padding-bottom: 70px;
+}
+
+.product-info h2 {
+  margin: 0 0 31px 0;
+}
+
+.product-info p {
+  margin: 0;
 }
