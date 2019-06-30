@@ -18,8 +18,12 @@
           </a>
           <form class="search-form" method="get" aria-label="Поиск по сайту">
             <label class="visually-hidden" for="search-request">Введите запрос:</label>
-            <input type="text" name="search-request" id="search-request" placeholder="Поиск:">
-            <button type="submit" aria-label="Искать"></button> 
+            <input class="search-field" type="text" name="search-request" id="search-request" placeholder="Поиск:">
+            <button class="search-btn" type="submit" aria-label="Искать">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" focusable="false">
+                <path fill="#FFFFFF" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/>
+              </svg>
+            </button> 
           </form>
           <a href="bookmarks.html" class="main-header-btn user-bookmarks-btn">Закладки: <span>0</span></a>
           <a href="cart.html" class="main-header-btn cart-btn not-empty">Корзина: <span>10</span></a>
@@ -36,9 +40,22 @@
           </div>
           <div class="authorized-user">
             <p class="visually-hidden">Данные авторизованного пользователя:</p>
-            <a href="profile.html" class="user-icon"><span class="visually-hidden">Пользователь</span></a>
+            <a href="profile.html" class="user-icon">
+              <span class="visually-hidden">Пользователь</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" focusable="false">
+                <path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/>
+              </svg>
+            </a>
             <a href="profile.html" class="user-name">Равшан Джамшутович</a>
-            <a href="logout.html" class="user-logout"><span class="visually-hidden">Выйти</span></a>
+            <a href="logout.html" class="user-logout">
+              <span class="visually-hidden">Выйти</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17" focusable="false">
+                <g fill="#c5c5c5">
+                    <path d="M21 8.5L12.125 0v6h-6v5h6v6z"/>
+                    <path d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/>
+                </g>
+              </svg>
+            </a>
             <ul class="authorized-user-navigation">
               <li><a href="orders-list.html">Мои заказы</a></li>
               <li><a href="account.html">Личный кабинет</a></li>
@@ -372,7 +389,7 @@
           </div>
           <div class="creator-email">
             <p>Обратная связь:</p>
-            <p class="creator-info">mail&#64;htmlacademy.ru</p>
+            <a class="creator-info" href="mailto:mail@htmlacademy.ru">mail&#64;htmlacademy.ru</a>
           </div>
           <div class="creator">
             <p>Разработано &#8211;</p>
