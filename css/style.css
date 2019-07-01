@@ -875,15 +875,12 @@ input[type="radio"].visually-hidden {
 }
 
 .promo-slides li {
-  /* position: absolute;
-  top: 0;
-  left: 0; */
   position: relative;
   display: none;
 }
 
-.promo-slides .promo-slide-1 {
-  /* z-index: 1; */
+#slide-1:checked ~ .promo-slides .promo-slide-1,
+#slide-2:checked ~ .promo-slides .promo-slide-2 {
   display: block;
 }
 
@@ -907,6 +904,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-btn {
+  display: none;
   position: absolute;
   z-index: 10;
   top: 121px;
@@ -917,6 +915,7 @@ input[type="radio"].visually-hidden {
   border-left: solid 3px #ffffff;
   border-bottom: solid 3px #ffffff;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .prev-btn {
@@ -927,6 +926,16 @@ input[type="radio"].visually-hidden {
 .next-btn {
   right: 26px;
   transform: rotate(-135deg);
+}
+
+#slide-1:checked ~ .prev-btns label:nth-child(2),
+#slide-2:checked ~ .prev-btns label:nth-child(1) {
+	display: block;
+}
+
+#slide-1:checked ~ .next-btns label:nth-child(2),
+#slide-2:checked ~ .next-btns label:nth-child(1) {
+	display: block;
 }
 
 .open-catalog-btn {
@@ -941,9 +950,32 @@ input[type="radio"].visually-hidden {
   position: absolute;
   z-index: 10;
   display: flex;
+  width: 30px;
+  justify-content: space-between;
   bottom: 36px;
   left: 50%;
   transform: translate(-50%);
+}
+
+.slider-dots label {
+  display: block;
+  width: 6px;
+  height: 6px;
+  line-height: 0;
+  background-color: #ffffff;
+  border: solid 2px #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#slide-1:checked ~ .slider-dots label[for="slide-1"],
+#slide-2:checked ~ .slider-dots label[for="slide-2"] {
+  background-color: #ee3643;
+}
+
+#slide-1:focus ~ .slider-dots label[for="slide-1"],
+#slide-2:focus ~ .slider-dots label[for="slide-2"] {
+  box-shadow: 0 0 0 2px lightblue;
 }
 
 /*-------------------Популярные товары и производители index.html, catalog.html-----------------*/
@@ -1224,7 +1256,7 @@ input[type="radio"].visually-hidden {
   padding: 45px 0 0 0;
 }
 
-.slider-navigation button {
+.slider-navigation label {
   display: block;
   width: 240px;
   box-sizing: border-box;
@@ -1240,14 +1272,16 @@ input[type="radio"].visually-hidden {
   box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
 }
 
-.slider-navigation .current-slide {
+#slide-delivery:checked ~ .slider-navigation label[for="slide-delivery"],
+#slide-warranty:checked ~ .slider-navigation label[for="slide-warranty"],
+#slide-credit:checked ~ .slider-navigation label[for="slide-credit"] {
   color: #32425c;
   background-color: #ffffff;
   box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
 }
 
-.slider-navigation button:not(.current-slide):focus,
-.slider-navigation button:not(.current-slide):hover {
+.slider-navigation label:focus,
+.slider-navigation label:hover {
   background-color: #293449;
 }
 
@@ -1278,7 +1312,6 @@ input[type="radio"].visually-hidden {
 }
 
 .delivery {
-  display: block;
   padding-top: 45px;
 }
 
@@ -1307,10 +1340,6 @@ input[type="radio"].visually-hidden {
   line-height: 36px;
 }
 
-/* .warranty {
-  display: block;
-} */
-
 .warranty::after {
   content: "";
   position: absolute;
@@ -1322,10 +1351,6 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
   background-repeat: no-repeat;
 }
-
-/* .credit {
-  display: block;
-} */
 
 .credit::after {
   content: "";
@@ -1344,6 +1369,21 @@ input[type="radio"].visually-hidden {
   margin: 25px 0 10px 0;
   color: #ffffff;
   background-color: #ff5357;
+}
+
+.credit-btn:focus,
+.credit-btn:hover {
+  background-color: #ca2c37;
+}
+
+.credit-btn:active {
+  background-color: #ba2732;
+}
+
+#slide-delivery:checked ~ .services-slides .delivery,
+#slide-warranty:checked ~ .services-slides .warranty,
+#slide-credit:checked ~ .services-slides .credit {
+  display: block;
 }
 
 .company-info {

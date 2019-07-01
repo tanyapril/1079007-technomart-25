@@ -98,6 +98,8 @@
 
           <div class="promo-slider">
             <p class="visually-hidden">Мы предлагаем:</p>
+            <input class="visually-hidden" type="radio" id="slide-1" name="toggle" checked aria-label="Показать слайд 1">
+            <input class="visually-hidden" type="radio" id="slide-2" name="toggle" aria-label="Показать слайд 2">
             <ul class="promo-slides">
               <li class="promo-slide-1">
                 <img src="img/slide-drills.jpg" width="620" height="266" alt="Дрели">
@@ -114,22 +116,19 @@
                 </div>
               </li>
             </ul>
-            <button class="slider-btn prev-btn" aria-label="Назад"></button>
-            <button class="slider-btn next-btn" aria-label="Вперед"></button>
+
+            <div class="prev-btns" aria-hidden="true">
+              <label class="slider-btn prev-btn" for="slide-1"></label>
+              <label class="slider-btn prev-btn" for="slide-2"></label>
+            </div>
+            <div class="next-btns" aria-hidden="true">
+              <label class="slider-btn next-btn" for="slide-1"></label>
+              <label class="slider-btn next-btn" for="slide-2"></label>
+            </div>
             <a href="catalog.html" class="main-btn main-btn-red open-catalog-btn">Открыть каталог</a>
-            <ul class="slider-dots">
-              <li>
-                <button>
-                  Слайд 1
-                  <span class="current-dot"></span>
-                </button>
-              </li>
-              <li>
-                <button>
-                  Слайд 2
-                  <span></span>
-                </button>
-              </li>
+            <ul class="slider-dots" aria-hidden="true">
+              <li><label for="slide-1"></label></li>
+              <li><label for="slide-2"></label></li>
             </ul>
           </div>
         </section>
@@ -269,10 +268,14 @@
           <p>Мы&nbsp;стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
 
           <div class="services-slider">
-            <ul class="slider-navigation">
-                <li><button class="current-slide">Доставка</button></li>
-                <li><button>Гарантия</button></li>
-                <li><button>Кредит</button></li>
+            <input class="visually-hidden" type="radio" id="slide-delivery" name="services-toggle" checked aria-label="Доставка">
+            <input class="visually-hidden" type="radio" id="slide-warranty" name="services-toggle" aria-label="Гарантия">
+            <input class="visually-hidden" type="radio" id="slide-credit" name="services-toggle" aria-label="Кредит">
+            
+            <ul class="slider-navigation" aria-hidden="true">
+                <li><label for="slide-delivery">Доставка</label></li>
+                <li><label for="slide-warranty">Гарантия</label></li>
+                <li><label for="slide-credit">Кредит</label></li>
             </ul>
 
             <ul class="services-slides">
