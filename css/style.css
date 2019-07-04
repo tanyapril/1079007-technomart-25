@@ -1,4 +1,5 @@
 body {
+  min-width: 960px;
   margin: 0;
   padding: 0;
   font-family: "Cuprum", Arial, sans-serif;
@@ -100,6 +101,10 @@ input[type="radio"].visually-hidden {
   padding: 0;
   font-size: 17px;
   line-height: 18px;
+  color: #ffffff;
+}
+
+.search-field::-webkit-input-placeholder {
   color: #ffffff;
 }
 
@@ -419,13 +424,23 @@ input[type="radio"].visually-hidden {
 }
 
 .authorized-user-navigation a {
+  position: relative;
   display: inline-block;
   vertical-align: middle;
   margin: 0 15px 0 0;
   font-size: 16px;
-  line-height: 16px;
-  border-bottom: solid 1px #32425c;
+  line-height: 18px;
   color: #32425c;
+}
+
+.authorized-user-navigation a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 1px;
+  left: 0;
+  border-bottom: solid 1px #32425c;
 }
 
 .authorized-user-navigation li:not(:last-child)::after {
@@ -441,13 +456,20 @@ input[type="radio"].visually-hidden {
 
 .authorized-user-navigation a:focus,
 .authorized-user-navigation a:hover {
-  border-bottom-color: #ee3643;
   color: #ee3643;
 }
 
+.authorized-user-navigation a:focus::after,
+.authorized-user-navigation a:hover::after {
+  border-bottom-color: #ee3643;
+}
+
 .authorized-user-navigation a:active {
-  border-bottom-color: rgba(50, 66, 92, 0.3);
   color: rgba(50, 66, 92, 0.3);
+}
+
+.authorized-user-navigation a:active::after {
+  border-bottom-color: rgba(50, 66, 92, 0.3);
 }
 
 .main-navigation {
@@ -552,12 +574,12 @@ input[type="radio"].visually-hidden {
   color: #ffd180;
 }
 
-.footer-navigation-item a:focus,
-.footer-navigation-item a:hover {
+.footer-navigation-item a:not(.current-page):focus,
+.footer-navigation-item a:not(.current-page):hover {
   text-decoration: underline;
 }
 
-.footer-navigation-item a:active {
+.footer-navigation-item a:not(.current-page):active {
   text-decoration: none;
   opacity: 0.5;
 }
@@ -1011,7 +1033,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
- margin-bottom: 1px;
+  margin-bottom: 1px;
 }
 
 .popular-products-list .catalog-item:nth-child(4n) {
@@ -1087,6 +1109,10 @@ input[type="radio"].visually-hidden {
   margin: 0 0 10px 0;
   padding: 0 0 0 3px;
   color: #999999;
+}
+
+.popular-products-list .product-old-price {
+  color: #a9a9a9;
 }
 
 .product-current-price {
@@ -1357,7 +1383,7 @@ input[type="radio"].visually-hidden {
   display: none;
   width: 700px;
   box-sizing: border-box;
-  padding: 50px 234px 89px 80px;
+  padding: 48px 245px 56px 80px;
 }
 
 .delivery {
@@ -1368,7 +1394,9 @@ input[type="radio"].visually-hidden {
 .delivery::after {
   content: "";
   position: absolute;
-  top: 68px;
+  z-index: 0;
+  /* top: 46px; */
+  bottom: -50px;
   right: 1px;
   width: 468px;
   height: 261px;
@@ -1378,7 +1406,7 @@ input[type="radio"].visually-hidden {
 }
 
 .services-slide h3 {
-  margin: 0 0 29px 0;
+  margin: 0 0 31px 0;
   font-size: 36px;
   font-weight: inherit;
   text-transform: uppercase;
@@ -1393,7 +1421,7 @@ input[type="radio"].visually-hidden {
 .warranty::after {
   content: "";
   position: absolute;
-  top: 50px;
+  bottom: -50px;
   right: -8px;
   width: 389px;
   height: 283px;
@@ -1405,7 +1433,7 @@ input[type="radio"].visually-hidden {
 .credit::after {
   content: "";
   position: absolute;
-  top: 45px;
+  bottom: -50px;
   right: -10px;
   width: 465px;
   height: 285px;
@@ -1416,7 +1444,7 @@ input[type="radio"].visually-hidden {
 
 .credit-btn {
   width: 195px;
-  margin: 25px 0 10px 0;
+  margin: 27px 0 7px 0;
   color: #ffffff;
   background-color: #ff5357;
 }
@@ -1626,6 +1654,12 @@ input[type="radio"].visually-hidden {
   box-shadow: 0px 0px 15px 0 rgba(0, 0, 0, 0.5);
 }
 
+.big-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .cart-notification h2 {
   position: relative;
   margin: 46px 124px 51px 81px;
@@ -1661,6 +1695,14 @@ input[type="radio"].visually-hidden {
   border: none;
   background-color: #ffffff;
 }
+
+.open-modal {
+  display: block;
+}
+
+/* @keyframes {
+
+} */
 
 /*-------------------catalog.html-----------------*/
 
@@ -1770,7 +1812,8 @@ input[type="radio"].visually-hidden {
 }
 
 .filter legend {
-  margin: 15px 0 14px 0;
+  margin: 0 0 14px 0;
+  padding: 15px 0 0 0;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   line-height: 30px;
@@ -1779,8 +1822,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter .first-fieldset-legend{
-  margin-top: 0;
-  margin-bottom: 13px;
+  padding-top: 0;
 }
 
 .power-type-legend {
@@ -1853,7 +1895,7 @@ input[type="radio"].visually-hidden {
   -moz-appearance:textfield;
   width: 95px;
   box-sizing: border-box;
-  padding: 10px 5px 11px 5px;
+  padding: 9px 5px 11px 5px;
   text-align: center;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;

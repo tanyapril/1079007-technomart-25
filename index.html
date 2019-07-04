@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -26,7 +25,7 @@
               </button> 
           </form>
           <a href="bookmarks.html" class="main-header-btn user-bookmarks-btn">Закладки: <span>0</span></a>
-          <a href="cart.html" class="main-header-btn cart-btn">Корзина: <span>0</span></a>
+          <a href="cart.html" class="main-header-btn cart-btn">Корзина: <span class = "cart-counter">0</span></a>
           <a href="order.html" class="main-header-btn order-btn">Оформить заказ</a>
         </div>
       </div>
@@ -55,7 +54,7 @@
             <ul class="main-navigation-list">
               <li><a class="current-page">Главная</a></li>
               <li><a href="company.html">Компания</a></li>
-              <li><a href="main-catalog.html">Каталог</a></li>
+              <li><a href="catalog.html">Каталог</a></li>
               <li><a href="news.html">Новости</a></li>
               <li><a href="special-offers.html">Спецпредложения</a></li>
               <li><a href="delivery.html">Доставка</a></li>
@@ -286,6 +285,10 @@
                     к&nbsp;вашему подъезду совершенно бесплатно!</p>
                   <p>Ведь мы&nbsp;неплохо заработаем,<br>
                     поднимая его на&nbsp;ваш этаж!</p>
+                    <p>Мы&nbsp;с&nbsp;удовольствием доставим ваш товар прямо<br> 
+                      к&nbsp;вашему подъезду совершенно бесплатно!</p>
+                      <p>Мы&nbsp;с&nbsp;удовольствием доставим ваш товар прямо<br> 
+                        к&nbsp;вашему подъезду совершенно бесплатно!</p>
                 </section>
               </li>
               <li>
@@ -329,7 +332,7 @@
         <section class="main-section text-section contacts">
           <h2>Контакты</h2>
           <p>Вы&nbsp;можете забрать товар сами,<br>заехав в&nbsp;наш офис:</p>
-          <a href="map.html" class="map">
+          <a href="https://goo.gl/maps/shhGFcSQAvHDVN1p6" class="map">
             <img src="img/map.png" width="300" height="158" alt="Большая Конюшенная ул., 19">
           </a>
           <a href="feedback.html" class="main-btn main-btn-red feedback-btn">Заблудились? Напишите нам!</a>
@@ -354,7 +357,7 @@
           <ul class="main-footer-navigation">
             <li class="footer-navigation-item"><a href="company.html">Компания</a></li>
             <li class="footer-navigation-item"><a href="news.html">Новости</a></li>
-            <li class="footer-navigation-item"><a href="main-catalog.html">Каталог</a></li>
+            <li class="footer-navigation-item"><a href="catalog.html">Каталог</a></li>
             <li class="footer-navigation-item"><a href="delivery.html">Доставка</a></li>
             <li class="footer-navigation-item"><a href="contacts.html">Контакты</a></li>
             <li class="footer-navigation-item"><a href="material.html">Материалы</a></li>
@@ -418,6 +421,7 @@
     <section class="modal big-map not-displayed">
       <!--Всплывающее окно-->
       <h3 class="visually-hidden">Как до нас добраться:</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533273!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1562222515518!5m2!1sru!2sru" width="940" height="446" frameborder="0" style="border:0" allowfullscreen></iframe>
       <img src="img/popup-map.png" width="940" height="446" alt="Офис компании по адресу Большая Конюшенная ул., 19, Санкт-Петербург">
       <button class="modal-close-btn" type="button"><span class="visually-hidden">Закрыть окно</span></button>
     </section>
@@ -427,9 +431,10 @@
       <h2>Товар добавлен в корзину!</h2>
       <div class="modal-bottom">
         <a href="order.html" class="main-btn main-btn-red modal-order-btn">Оформить заказ</a>
-        <button type="button" class="main-btn continue-shopping-btn">Продолжить покупки</button>
+        <button type="button" class="main-btn continue-shopping-btn cart-notification-close">Продолжить покупки</button>
       </div>
-      <button class="modal-close-btn" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+      <button class="modal-close-btn cart-notification-close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
     </section>
+    <script src="js/script.js"></script>
   </body>
 </html>

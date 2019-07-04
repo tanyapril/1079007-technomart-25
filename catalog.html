@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт &#8212; Каталог &#8212; Инструмент &#8212; Перфораторы</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -65,7 +64,7 @@
             <ul class="main-navigation-list">
               <li><a href="index.html">Главная</a></li>
               <li><a href="company.html">Компания</a></li>
-              <li><a href="main-catalog.html">Каталог</a></li>
+              <li><a class="current-page">Каталог</a></li>
               <li><a href="news.html">Новости</a></li>
               <li><a href="special-offers.html">Спецпредложения</a></li>
               <li><a href="delivery.html">Доставка</a></li>
@@ -234,8 +233,8 @@
                   <a class="main-btn buy-btn" href="#">Купить</a>
                   <a class="main-btn to-bookmarks-btn" href="#">В закладки</a>
                 </p>
-                <p class="product-price product-old-price"><del>25500 р.</del></p>
-                <p class="product-price product-current-price">12500 р.</p>
+                <p class="product-price product-old-price"><del>22500 р.</del></p>
+                <p class="product-price product-current-price">15500 р.</p>
               </li>
 
               <li class="catalog-item" tabindex="0">
@@ -285,8 +284,8 @@
                   <a class="main-btn buy-btn" href="#">Купить</a>
                   <a class="main-btn to-bookmarks-btn" href="#">В закладки</a>
                 </p>
-                <p class="product-price product-old-price"><del>25500 р.</del></p>
-                <p class="product-price product-current-price">12500 р.</p>
+                <p class="product-price product-old-price"><del>22500 р.</del></p>
+                <p class="product-price product-current-price">15500 р.</p>
               </li>
 
               <li class="catalog-item" tabindex="0">
@@ -363,7 +362,7 @@
           <ul class="main-footer-navigation">
             <li class="footer-navigation-item"><a href="company.html">Компания</a></li>
             <li class="footer-navigation-item"><a href="news.html">Новости</a></li>
-            <li class="footer-navigation-item"><a href="main-catalog.html">Каталог</a></li>
+            <li class="footer-navigation-item"><a class="current-page">Каталог</a></li>
             <li class="footer-navigation-item"><a href="delivery.html">Доставка</a></li>
             <li class="footer-navigation-item"><a href="contacts.html">Контакты</a></li>
             <li class="footer-navigation-item"><a href="material.html">Материалы</a></li>
@@ -404,9 +403,10 @@
       <h2>Товар добавлен в корзину!</h2>
       <div class="modal-bottom">
         <a href="order.html" class="main-btn main-btn-red modal-order-btn">Оформить заказ</a>
-        <button type="button" class="main-btn continue-shopping-btn">Продолжить покупки</button>
+        <button type="button" class="main-btn continue-shopping-btn cart-notification-close">Продолжить покупки</button>
       </div>
-      <button class="modal-close-btn" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+      <button class="modal-close-btn cart-notification-close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
     </section>
+    <script src="js/script.js"></script>
   </body>
 </html>
