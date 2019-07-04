@@ -38,7 +38,9 @@ if (feedbackLink) {
   feedbackForm.addEventListener("submit", function (evt) {
     if (!userName.value || !userEmail.value || !message.value) {
       evt.preventDefault();
-      console.log("Нужно ввести имя, email и текст сообщения");
+      feedbackModal.classList.remove("modal-error");
+      feedbackModal.offsetWidth = feedbackModal.offsetWidth;
+      feedbackModal.classList.add("modal-error");
     } else {
       if (isStorageOn) {
         localStorage.setItem("name", userName.value);
@@ -50,13 +52,15 @@ if (feedbackLink) {
   closeFeedbackModal.addEventListener("click", function (evt) {
     evt.preventDefault();
     feedbackModal.classList.remove("open-modal");
+    feedbackModal.classList.remove("modal-error");
   });
 
   window.addEventListener("keydown", function (evt) {
-    if (evt.key === "Escape") {
+    if (evt.key === "Escape" || evt.key === "Esc") {
       evt.preventDefault();
       if (feedbackModal.classList.contains("open-modal")) {
         feedbackModal.classList.remove("open-modal");
+        feedbackModal.classList.remove("modal-error");
       }
     }
   });
