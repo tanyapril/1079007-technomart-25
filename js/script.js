@@ -40,6 +40,15 @@ if (feedbackLink) {
       evt.preventDefault();
       feedbackModal.classList.remove("modal-error");
       feedbackModal.offsetWidth = feedbackModal.offsetWidth;
+      if (!userName.value) {
+        userName.focus();
+      } else {
+        if (!userEmail.value) {
+          userEmail.focus();
+        } else {
+          message.focus();
+        }
+      }
       feedbackModal.classList.add("modal-error");
     } else {
       if (isStorageOn) {
@@ -85,7 +94,7 @@ if (mapLink) {
   });
 
   window.addEventListener("keydown", function (evt) {
-    if (evt.key === "Escape") {
+    if (evt.key === "Escape" || evt.key === "Esc") {
       evt.preventDefault();
       if (mapModal.classList.contains("open-modal")) {
         mapModal.classList.remove("open-modal");
@@ -121,7 +130,7 @@ for (i = 0; i < closeCartNotificationModal.length; i++) {
 }
 
 window.addEventListener("keydown", function (evt) {
-  if (evt.key === "Escape") {
+  if (evt.key === "Escape" || evt.key === "Esc") {
     evt.preventDefault();
     if (cartNotificationModal.classList.contains("open-modal")) {
       cartNotificationModal.classList.remove("open-modal");

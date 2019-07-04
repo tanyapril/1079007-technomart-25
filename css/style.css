@@ -1696,20 +1696,16 @@ input[type="radio"].visually-hidden {
 
 .open-modal {
   display: block;
-  animation: diagonal 0.8s;
+  animation: diagonal 0.6s;
 }
 
 .modal-error {
-  animation: rotation 8s;
+  animation: rotation 0.6s;
 }
 
 @keyframes diagonal {
   0% {
-    transform: translate(-300%, -300%);
-  }
-
-  80% {
-    transform: translate(-35%, -35%);
+    transform: translate(-2000px, -2000px);
   }
 
   100% {
@@ -1720,7 +1716,7 @@ input[type="radio"].visually-hidden {
 @keyframes rotation {
   0%,
   100% {
-    transform: rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
 
   10%,
@@ -1728,14 +1724,14 @@ input[type="radio"].visually-hidden {
   50%,
   70%,
   90% {
-    transform: rotate(5deg);
+    transform: translate(-50%, -50%) rotate(2deg);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: rotate(-5deg);
+    transform: translate(-50%, -50%) rotate(-2deg);
   }
 }
 
